@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ShoppingCart</display-name>
+  <welcome-file-list>
+    <welcome-file>jsp/login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>service.LoginService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>logoutServlet</servlet-name>
+    <servlet-class>service.LogoutService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <!-- seller -->
+  <servlet>
+    <servlet-name>shopSettingServlet</servlet-name>
+    <servlet-class>service.ShopSettingService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopSettingServlet</servlet-name>
+    <url-pattern>/shopSetting</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>shopGoodServlet</servlet-name>
+    <servlet-class>service.ShopGoodService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopGoodServlet</servlet-name>
+    <url-pattern>/shopGood</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>shopGoodAddServlet</servlet-name>
+    <servlet-class>service.ShopGoodAddService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopGoodAddServlet</servlet-name>
+    <url-pattern>/addShopGood</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>shopGoodDelServlet</servlet-name>
+    <servlet-class>service.ShopGoodDelService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopGoodDelServlet</servlet-name>
+    <url-pattern>/delShopGood</url-pattern>
+  </servlet-mapping>
+  
+  <!-- buyer -->
+  <servlet>
+    <servlet-name>shopServlet</servlet-name>
+    <servlet-class>service.ShopService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopServlet</servlet-name>
+    <url-pattern>/buyer_index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>buyerGoodServlet</servlet-name>
+    <servlet-class>service.BuyerGoodService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>buyerGoodServlet</servlet-name>
+    <url-pattern>/buyer_good</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>addItemServlet</servlet-name>
+    <servlet-class>service.CartAddService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addItemServlet</servlet-name>
+    <url-pattern>/add2Cart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>delItemServlet</servlet-name>
+    <servlet-class>service.CartDelService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delItemServlet</servlet-name>
+    <url-pattern>/delFromCart</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
